@@ -5,5 +5,6 @@
 set -e
 
 gem install bundle
+pip install ansible-lint
 
 set +e
