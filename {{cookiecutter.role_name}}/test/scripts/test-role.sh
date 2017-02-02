@@ -6,6 +6,6 @@ set -e
 
 ansible-lint .
 kitchen diagnose --all
-kitchen test
+kitchen test --concurrency
 
 set +e
