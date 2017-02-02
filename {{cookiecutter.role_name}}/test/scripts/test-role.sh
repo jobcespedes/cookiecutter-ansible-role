@@ -6,6 +6,7 @@ set -e
 
 ansible-lint .
 kitchen diagnose --all
-kitchen test --concurrency
+# Uncomment the --concurrency flag to run multiple tests in parallel
+kitchen test #--concurrency
 
 set +e
