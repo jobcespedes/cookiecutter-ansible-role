@@ -1,30 +1,30 @@
 ---
 
-allow_duplicates: {{ cookiecutter.allow_duplicates }}
+allow_duplicates: {{cookiecutter.allow_duplicates}}
 
 
 galaxy_info:
-  author: {{ cookiecutter.full_name }}
-  description: {{ cookiecutter.short_description }}
+  author: {{cookiecutter.full_name}}
+  description: {{cookiecutter.short_description}}
   license: 3-clause BSD license.
-  min_ansible_version: {{ cookiecutter.min_ansible_version }}
+  min_ansible_version: {{cookiecutter.min_ansible_version}}
   platforms:
     - name: Ubuntu
       versions:
         - trusty
         - xenial
   categories:
-    #- cloud
-    #- cloud:ec2
-    #- cloud:gce
-    #- cloud:rax
-    #- clustering
-    #- database
-    #- database:nosql
-    #- database:sql
-    #- development
-    #- monitoring
-    #- networking
-    #- packaging
-    #- system
-    #- web
+  # - cloud
+  # - cloud:ec2
+  # - cloud:gce
+  # - cloud:rax
+  # - clustering
+  # - database
+  # - database:nosql
+  # - database:sql
+  # - development
+  # - monitoring
+  # - networking
+  # - packaging
+  # - system
+  # - web

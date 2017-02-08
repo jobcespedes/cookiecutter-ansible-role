@@ -25,7 +25,7 @@ provisioner:
   require_ansible_repo: true
   require_chef_for_busser: false
   require_ruby_for_busser: false
-  role_name: {{ cookiecutter.role_name }}
+  role_name: {{cookiecutter.role_name}}
   roles_path: .
 
 suites:
