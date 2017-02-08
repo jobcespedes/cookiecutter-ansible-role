@@ -6,5 +6,6 @@ set -e
 
 gem install bundle
 pip install ansible-lint
+pip install yamllint
 
 set +e
