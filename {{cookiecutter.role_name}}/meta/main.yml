@@ -6,14 +6,14 @@ allow_duplicates: {{cookiecutter.allow_duplicates}}
 galaxy_info:
   author: {{cookiecutter.full_name}}
   description: {{cookiecutter.short_description}}
-  license: 3-clause BSD license.
+  license: "license (Apache 2.0)"
   min_ansible_version: {{cookiecutter.min_ansible_version}}
   platforms:
     - name: Ubuntu
       versions:
         - trusty
         - xenial
-  categories:
+  galaxy_tags:
   # - cloud
   # - cloud:ec2
   # - cloud:gce

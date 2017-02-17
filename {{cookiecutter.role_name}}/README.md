@@ -1,16 +1,36 @@
-# {{cookiecutter.role_name}}
+# Ansible Role: {{cookiecutter.role_name}}
+
+* Development branch: [![Build Status](https://travis-ci.org/{{cookiecutter.github_user}}/{{cookiecutter.repo_name}}.svg?branch=development)](https://travis-ci.org/{{cookiecutter.github_user}}/{{cookiecutter.repo_name}})
+* Master branch: [![Build Status](https://travis-ci.org/{{cookiecutter.github_user}}/{{cookiecutter.repo_name}}.svg?branch=master)](https://travis-ci.org/{{cookiecutter.github_user}}/{{cookiecutter.repo_name}})
 
 {{cookiecutter.short_description}}
 
-## Usage
+## Using the role
+### Installation
+```
+ansible-galaxy install {{ cookiecutter.role_name }}
+```
 
-`ansible-galaxy install {{ cookiecutter.role_name }}`
+### Example Playbook
+```
+  - hosts: all
+    roles:
+      - {{ cookiecutter.role_name }}
+```
 
-LICENSE: 3-clause BSD license.
+## Testing the role
 
-## CONTRIBUTING
+### Dependencies
+- Bundler, 1.13.0+
+- Ruby, 2.3.0+
+- Docker, 1.13.0+
 
-`git clone git@github.com:{{cookiecutter.github_user}}/{{cookiecutter.repo_name}}`
+### Setup
 
----
-Copyright © {{cookiecutter.year}}, {{ cookiecutter.full_name }}
+1. Install Bundler: `gem install bundler`
+1. Install required gems from inside the root of the project: `bundle install`
+1. Run `kitchen test`
+
+### Parallel test execution
+
+See [test/scripts/test-role.sh](test/scripts/test-role.sh).
