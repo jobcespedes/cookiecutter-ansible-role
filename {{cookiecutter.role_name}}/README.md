@@ -28,8 +28,8 @@ ansible-galaxy install {{ cookiecutter.role_name }}
 (may work with older versions)
 
 ### Setup
-1. Install the necessary tools: [test/scripts/test-role.sh](test/scripts/before-install.sh)
-1. Install required gems from inside the root of the project: [test/scripts/test-role.sh](test/scripts/install.sh)
+1. Install the necessary tools: [test/scripts/before-install.sh](test/scripts/before-install.sh)
+1. Install required gems from inside the root of the project: [test/scripts/install.sh](test/scripts/install.sh)
 1. Run lint checks and tests: [test/scripts/test-role.sh](test/scripts/test-role.sh)
 
 Note that after installing the required gems you can run other Test-kitchen commands besides the ones listed in [test/scripts/test-role.sh](test/scripts/test-role.sh).
