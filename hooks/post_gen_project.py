@@ -14,6 +14,8 @@ except NameError:
 
 folders = OrderedDict()
 
+defaults_folder_name = 'defaults'
+
 folders['tasks']= {
     'question': '\nShould it have tasks? ',
     'hint': '  Add task name i.e (Install packages) ',
@@ -26,7 +28,7 @@ folders['handlers'] = {
     'action': '- name: {}\n  # TODO\n\n'
 }
 
-folders['defaults'] = {
+folders[defaults_folder_name] = {
     'question': '\nIt should contain default variables?: ',
     'hint': '  Add variable i.e (operator: drunken_master) ',
     'action': '{}\n\n'
@@ -48,6 +50,7 @@ folders['files'] = {
     'question': '\nShould it have files? ',
 }
 
+ansible_role_name = '{{ cookiecutter.role_name }}'
 
 def configure_role():
     print('\n\nROLE CONFIGURATION:\n===================')
@@ -71,7 +74,10 @@ def configure_role():
 
                     action_name = input(folder['hint'])
                     while action_name:
-                        fp.write(folder['action'].format(action_name))
+                        if folder_name != defaults_folder_name:
+                            fp.write(folder['action'].format(action_name))
+                        else:
+                            fp.write(ansible_role_name + '_' + folder['action'].format(action_name))
                         action_name = input(folder['hint'])
 
         else:
