@@ -11,8 +11,10 @@ project that I used as a starting point.
 1. Only Creates the necessary files and folders
 1. Blazing fast creation, forget about file creation and focus in actions
 1. Lint checks ([Ansible-lint](https://github.com/willthames/ansible-lint), [yamllint](https://github.com/adrienverge/yamllint))
-1. Test infrastructure already implemented ([Test-kitchen](https://github.com/test-kitchen/test-kitchen), [kitchen-ansible](https://github.com/neillturner/kitchen-ansible), [kitchen-docker](https://github.com/test-kitchen/kitchen-docker), [Inspec](https://github.com/chef/kitchen-inspec)):
+1. Test infrastructure already implemented ([Test-kitchen](https://github.com/test-kitchen/test-kitchen), [kitchen-ansible](https://github.com/neillturner/kitchen-ansible), [kitchen-docker](https://github.com/test-kitchen/kitchen-docker), [InSpec](http://inspec.io/) + [kitchen-inspec](https://github.com/chef/kitchen-inspec)):
   1. Test your roles against multiple platforms using the power of Docker
+  1. The life cycle of each platform is automatically managed by Test-kitchen
+  1. Your roles can be verified with InSpec
 1. Travis-CI integration ready ([.travis.yml]({{cookiecutter.role_name}}/.travis.yml), [badges in README.md for development and master branches]({{cookiecutter.role_name}}/README.md))
 1. Parallel test execution ready
 
@@ -21,11 +23,7 @@ project that I used as a starting point.
 1. Install [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html#install-cookiecutter): `pip install cookiecutter`
 1. `cookiecutter https://github.com/ferrarimarco/cookiecutter-ansible-role`
 
-It begin to ask you configuration variables then you can enter tasks names,
-handlers names, and default variables.
-
-Inside a `Add <some> name i.e (<example>)` you can go to next section by entering
-an empty string.
+It will ask you questions about the strutcure of your role like tasks names, handlers names, and default variables. You can jump to the next question by entering an empty string.
 
 ## Test the generated role
 
