@@ -23,7 +23,7 @@ project that I used as a starting point.
 1. Install [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html#install-cookiecutter): `pip install cookiecutter`
 1. `cookiecutter https://github.com/ferrarimarco/cookiecutter-ansible-role`
 
-It will ask you questions about the strutcure of your role like tasks names, handlers names, and default variables. You can jump to the next question by entering an empty string.
+It will ask you questions about the structure of your role like tasks names, handlers names, and default variables. You can jump to the next question by entering an empty string.
 
 ## Test the generated role
 
