@@ -21,15 +21,18 @@ ansible-galaxy install {{ cookiecutter.role_name }}
 ## Testing the role
 
 ### Dependencies
-- Bundler, 1.13.0+
-- Ruby, 2.3.0+
-- Docker, 1.13.0+
+- Bundler 1.13.0+
+- Ruby 2.3.0+
+- Docker 1.12.0+
+
+(may work with older versions)
 
 ### Setup
+1. Install the necessary tools: [test/scripts/test-role.sh](test/scripts/before-install.sh)
+1. Install required gems from inside the root of the project: [test/scripts/test-role.sh](test/scripts/install.sh)
+1. Run lint checks and tests: [test/scripts/test-role.sh](test/scripts/test-role.sh)
 
-1. Install Bundler: `gem install bundler`
-1. Install required gems from inside the root of the project: `bundle install`
-1. Run `kitchen test`
+Note that after installing the required gems you can run other Test-kitchen commands besides the ones listed in [test/scripts/test-role.sh](test/scripts/test-role.sh).
 
 ### Parallel test execution
 
