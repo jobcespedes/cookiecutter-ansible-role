@@ -2,7 +2,6 @@
 
 allow_duplicates: {{cookiecutter.allow_duplicates}}
 
-
 galaxy_info:
   author: {{cookiecutter.full_name}}
   description: {{cookiecutter.short_description}}
