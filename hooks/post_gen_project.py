@@ -77,7 +77,7 @@ def configure_role():
                         if folder_name != defaults_folder_name:
                             fp.write(folder['action'].format(action_name))
                         else:
-                            fp.write(ansible_role_name + '_' + folder['action'].format(action_name))
+                            fp.write(ansible_role_name.replace('.', '_') + '_' + folder['action'].format(action_name))
                         action_name = input(folder['hint'])
 
         else:
