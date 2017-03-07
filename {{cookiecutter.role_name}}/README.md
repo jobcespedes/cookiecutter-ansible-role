@@ -24,10 +24,8 @@ ansible-galaxy install {{ cookiecutter.role_name }}
 - Bundler 1.13.0+
 - Ruby 2.3.0+
 - Docker 1.12.0+
-- Ansible-lint
-- yamllint
-
-(may work with older versions)
+- See [Gemfile](Gemfile)
+- See [requirements.txt](requirements.txt)
 
 ### Setup
 1. Install the necessary tools: [test/scripts/before-install.sh](test/scripts/before-install.sh)
