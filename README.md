@@ -15,8 +15,8 @@ project that I used as a starting point.
   1. Test your roles against multiple platforms using the power of Docker
   1. The life cycle of each platform is automatically managed by Test-kitchen
   1. Your roles can be verified with InSpec
-1. Travis-CI integration ready ([.travis.yml]({{cookiecutter.role_name}}/.travis.yml), [badges in README.md for development and master branches]({{cookiecutter.role_name}}/README.md))
-1. Parallel test execution ready
+1. Travis-CI integration ready, with support for parallel builds: ([.travis.yml]({{cookiecutter.role_name}}/.travis.yml), [badges in README.md for development and master branches]({{cookiecutter.role_name}}/README.md))
+1. Parallel test execution ready ([{{cookiecutter.role_name}}/test/scripts/test-role.sh]({{cookiecutter.role_name}}/test/scripts/test-role.sh))
 
 ## Usage
 
