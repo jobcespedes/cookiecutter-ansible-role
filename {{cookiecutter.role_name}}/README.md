@@ -18,6 +18,10 @@ ansible-galaxy install {{ cookiecutter.role_name }}
       - {{ cookiecutter.role_name }}
 ```
 
+### Variables
+
+See [`defaults/main.yml`](defaults/main.yml).
+
 ## Testing the role
 
 ### Dependencies
