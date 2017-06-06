@@ -31,5 +31,8 @@ provisioner:
 suites:
   - name: default
 
+transport:
+  max_ssh_sessions: 6
+
 verifier:
   name: inspec
