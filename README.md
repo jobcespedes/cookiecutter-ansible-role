@@ -1,6 +1,9 @@
 # Cookiecutter Ansible Role
 
-Cookie cutter recipe to easily create [ansible roles](http://docs.ansible.com/playbooks_roles.html#roles).
+* Development branch: [![Build Status](https://travis-ci.org/ferrarimarco/cookiecutter-ansible-role.svg?branch=development)](https://travis-ci.org/ferrarimarco/cookiecutter-ansible-role)
+* Master branch: [![Build Status](https://travis-ci.org/ferrarimarco/cookiecutter-ansible-role.svg?branch=master)](https://travis-ci.org/ferrarimarco/cookiecutter-ansible-role)
+
+[Cookiecutter](https://github.com/audreyr/cookiecutter) recipe to easily create [ansible roles](http://docs.ansible.com/playbooks_roles.html#roles).
 This is a fork of the excellent [iknite/cookiecutter-ansible-role](https://github.com/iknite/cookiecutter-ansible-role)
 project that I used as a starting point.
 
