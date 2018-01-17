@@ -6,10 +6,6 @@ driver:
   use_sudo: false
 
 platforms:
-  - name: ubuntu-14.04
-    driver_config:
-      image: ubuntu:14.04
-      platform: ubuntu
   - name: ubuntu-16.04
     driver_config:
       image: ubuntu:16.04
@@ -26,6 +22,7 @@ provisioner:
   require_ansible_repo: true
   require_chef_for_busser: false
   require_ruby_for_busser: false
+  requirements_path: ./test/integration/requirements.yml
   role_name: {{cookiecutter.role_name}}
   roles_path: .
 

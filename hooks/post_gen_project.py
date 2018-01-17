@@ -14,24 +14,29 @@ except NameError:
 
 folders = OrderedDict()
 
+integration_test_folder_name = os.path.join('test', 'integration')
 defaults_folder_name = 'defaults'
+main_file_name = 'main.yml'
 
 folders['tasks']= {
     'question': '\nShould it have tasks? ',
     'hint': '  Add task name i.e (Install packages) ',
-    'action': '- name: {}\n  # TODO\n\n'
+    'action': '- name: {}\n  # TODO\n\n',
+    'file_name': main_file_name
 }
 
 folders['handlers'] = {
     'question': '\nShould it have handlers?',
     'hint': '  Add handler name i.e (Restart uwsgi) ',
-    'action': '- name: {}\n  # TODO\n\n'
+    'action': '- name: {}\n  # TODO\n\n',
+    'file_name': main_file_name
 }
 
 folders[defaults_folder_name] = {
-    'question': '\nIt should contain default variables?: ',
+    'question': '\nShould it contain default variables?: ',
     'hint': '  Add variable i.e (operator: drunken_master) ',
-    'action': '{}\n\n'
+    'action': '{}\n\n',
+    'file_name': main_file_name
 }
 
 folders['meta']= {
@@ -39,7 +44,15 @@ folders['meta']= {
     'pre_hint': ' - Should it have dependencies? ',
     'pre_action': '\ndependencies:\n',
     'hint': '    Add dependency i.e ({role: aptsupercow, var: \'value\'}) ',
-    'action': '  - {}\n'
+    'action': '  - {}\n',
+    'file_name': main_file_name
+}
+
+folders[integration_test_folder_name]= {
+    'question': '\nShould it have requirements for integration tests? ',
+    'hint': '    Add requirement i.e (role.id:version) ',
+    'action': '- src: {}\n  version: {}\n',
+    'file_name': 'requirements.yml'
 }
 
 folders['templates'] = {
@@ -64,7 +77,8 @@ def configure_role():
                 pass
 
             if 'hint' in folder:
-                with open('{}/main.yml'.format(folder_name), 'a') as fp:
+                file_name = folder['file_name']
+                with open('{}/{}'.format(folder_name, file_name), 'a') as fp:
 
                     if 'pre_hint' in folder:
                         if read_user_yes_no(folder['pre_hint'], default_value=u'yes'):
@@ -74,10 +88,15 @@ def configure_role():
 
                     action_name = input(folder['hint'])
                     while action_name:
-                        if folder_name != defaults_folder_name:
-                            fp.write(folder['action'].format(action_name))
-                        else:
+                        if folder_name == defaults_folder_name:
                             fp.write(ansible_role_name.replace('.', '_') + '_' + folder['action'].format(action_name))
+                        elif folder_name == integration_test_folder_name:
+                            role_data = action_name.split(':')
+                            if len(role_data) != 2:
+                                raise ValueError('Cannot parse requirement: {}'.format(action_name))
+                            fp.write(folder['action'].format(role_data[0], role_data[1]))
+                        else:
+                            fp.write(folder['action'].format(action_name))
                         action_name = input(folder['hint'])
 
         else:
