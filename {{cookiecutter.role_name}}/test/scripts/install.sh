@@ -5,5 +5,6 @@
 set -e
 
 bundle install
+kitchen diagnose --all
 
 set +e

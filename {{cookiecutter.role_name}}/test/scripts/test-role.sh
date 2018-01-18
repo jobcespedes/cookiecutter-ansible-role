@@ -6,7 +6,6 @@ set -e
 
 ansible-lint .
 yamllint -d "{extends: default, rules: {line-length: {level: warning}}}" .
-kitchen diagnose --all
 
 # Uncomment the --concurrency flag to run multiple tests in parallel using the
 # Test-Kitchen parallelization feature.
