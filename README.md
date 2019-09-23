@@ -3,8 +3,7 @@
 [![Build Status](https://travis-ci.org/jobcespedes/cookiecutter-ansible-role.svg?branch=master)](https://travis-ci.org/jobcespedes/cookiecutter-ansible-role)
 
 [Cookiecutter](https://github.com/audreyr/cookiecutter) recipe to easily create [ansible roles](http://docs.ansible.com/playbooks_roles.html#roles).
-This is a fork of the excellent [iknite/cookiecutter-ansible-role](https://github.com/iknite/cookiecutter-ansible-role)
-project that I used as a starting point.
+This is a fork from [ferrarimarco/cookiecutter-ansible-role](https://github.com/ferrarimarco/cookiecutter-ansible-role)
 
 ## Features
 
@@ -18,7 +17,7 @@ project that I used as a starting point.
 ## Usage
 
 1. Install [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html#install-cookiecutter): `pip install cookiecutter`
-1. `cookiecutter https://github.com/ferrarimarco/cookiecutter-ansible-role`
+1. `cookiecutter https://github.com/jobcespedes/cookiecutter-ansible-role`
 
 It will ask you questions about the structure of your role like tasks names, handlers names, and default variables. You can jump to the next question by entering an empty string.
 
