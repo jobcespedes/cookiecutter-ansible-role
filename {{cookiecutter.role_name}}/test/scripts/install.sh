@@ -4,7 +4,7 @@
 # Fail if one of the commands of this script fails
 set -e
 
-bundle install
-kitchen diagnose --all
+pip install -r requirements.txt
+pip install molecule docker ansible-lint yamllint
 
 set +e

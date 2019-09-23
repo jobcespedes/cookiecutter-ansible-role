@@ -14,7 +14,6 @@ except NameError:
 
 folders = OrderedDict()
 
-integration_test_folder_name = os.path.join('test', 'integration')
 defaults_folder_name = 'defaults'
 main_file_name = 'main.yml'
 
@@ -48,13 +47,6 @@ folders['meta']= {
     'file_name': main_file_name
 }
 
-folders[integration_test_folder_name]= {
-    'question': '\nShould it have requirements for integration tests? ',
-    'hint': '    Add requirement i.e (role.id:version) ',
-    'action': '- src: {}\n  version: {}\n',
-    'file_name': 'requirements.yml'
-}
-
 folders['templates'] = {
     'question': '\nShould it have templates? ',
 }
@@ -70,11 +62,11 @@ def configure_role():
     for folder_name, folder in folders.items():
         if read_user_yes_no(folder['question'], default_value=u'yes'):
 
-            try:
-                # this file has to be there, git doesn't store empty folders.
-                os.remove(os.path.join(folder_name, '.empty'))
-            except OSError:
-                pass
+            # try:
+            #     # this file has to be there, git doesn't store empty folders.
+            #     os.remove(os.path.join(folder_name, '.empty'))
+            # except OSError:
+            #     pass
 
             if 'hint' in folder:
                 file_name = folder['file_name']
@@ -90,11 +82,6 @@ def configure_role():
                     while action_name:
                         if folder_name == defaults_folder_name:
                             fp.write(ansible_role_name.replace('.', '_') + '_' + folder['action'].format(action_name))
-                        elif folder_name == integration_test_folder_name:
-                            role_data = action_name.split(':')
-                            if len(role_data) != 2:
-                                raise ValueError('Cannot parse requirement: {}'.format(action_name))
-                            fp.write(folder['action'].format(role_data[0], role_data[1]))
                         else:
                             fp.write(folder['action'].format(action_name))
                         action_name = input(folder['hint'])

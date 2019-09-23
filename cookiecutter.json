@@ -1,13 +1,12 @@
 {
-  "full_name": "Marco Ferrari",
-  "email": "ferrari.marco@gmail.com",
+  "full_name": "Job Céspedes",
+  "email": "jobcespedes@gmail.com",
   "role_name": "Super.Role",
-  "github_user": "ferrarimarco",
-  "repo_name": "ansible-super-role",
-  "short_description": "This Ansible Role infuses antigravity, you are warned",
-  "release_date": "2017-02-17",
-  "year": "2017",
+  "github_user": "jobcespedes",
+  "repo_name": "ansible_{{ cookiecutter.role_name }}",
+  "short_description": "Description for {{ cookiecutter.role_name }}",
+  "year": "2019",
   "version": "0.0.1",
-  "min_ansible_version": "2.2",
+  "min_ansible_version": "2.5",
   "allow_duplicates": "no"
 }
