@@ -3,7 +3,7 @@
   "email": "jobcespedes@gmail.com",
   "role_name": "Super.Role",
   "github_user": "jobcespedes",
-  "repo_name": "ansible_{{ cookiecutter.role_name }}",
+  "repo_name": "{{ cookiecutter.role_name }}",
   "short_description": "Description for {{ cookiecutter.role_name }}",
   "year": "2019",
   "version": "0.0.1",
