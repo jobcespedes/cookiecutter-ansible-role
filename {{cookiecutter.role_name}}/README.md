@@ -26,7 +26,7 @@ Example Playbook
 ```yaml
 - hosts: all
   roles:
-    - {{github_user}}.{{ cookiecutter.role_name }}
+    - {{ cookiecutter.github_user }}.{{ cookiecutter.role_name }}
 ```
 
 License
