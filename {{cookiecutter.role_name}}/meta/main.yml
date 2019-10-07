@@ -4,7 +4,7 @@ allow_duplicates: {{cookiecutter.allow_duplicates}}
 galaxy_info:
   author: {{cookiecutter.full_name}}
   description: {{cookiecutter.short_description}}
-  license: Apache 2.0
+  license: MIT
   min_ansible_version: {{cookiecutter.min_ansible_version}}
   platforms:
     - name: EL
