@@ -18,17 +18,17 @@ galaxy_info:
       versions:
         - stretch
   # galaxy_tags:
-  # - cloud
-  # - cloud:ec2
-  # - cloud:gce
-  # - cloud:rax
-  # - clustering
-  # - database
-  # - database:nosql
-  # - database:sql
-  # - development
-  # - monitoring
-  # - networking
-  # - packaging
-  # - system
-  # - web
+  #   - cloud
+  #   - cloud:ec2
+  #   - cloud:gce
+  #   - cloud:rax
+  #   - clustering
+  #   - database
+  #   - database:nosql
+  #   - database:sql
+  #   - development
+  #   - monitoring
+  #   - networking
+  #   - packaging
+  #   - system
+  #   - web
