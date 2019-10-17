@@ -2,4 +2,7 @@
 - name: Converge
   hosts: all
   roles:
-    - role: {% raw -%}"{{ lookup('env','GALAXY_ROLE_NAME') | default('{%- endraw %}{{ cookiecutter.role_name }}{% raw -%}') }}"{%- endraw %}
+    - role: {% raw -%}>-
+        {{ lookup('env','GALAXY_ROLE_NAME') |
+        default( playbook_dir | dirname |
+        dirname | basename, true ) }}{%- endraw %}
