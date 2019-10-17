@@ -2,7 +2,7 @@
 - name: Converge
   hosts: all
   roles:
-    - role: {% raw -%}>-
-        {{ lookup('env','GALAXY_ROLE_NAME') |
+    - role: >-
+        {% raw -%}{{ lookup('env','GALAXY_ROLE_NAME') |
         default( playbook_dir | dirname |
         dirname | basename, true ) }}{%- endraw %}
