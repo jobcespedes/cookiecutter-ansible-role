@@ -8,5 +8,5 @@
   "year": "2019",
   "version": "0.0.1",
   "min_ansible_version": "2.5",
-  "allow_duplicates": "no"
+  "allow_duplicates": "false"
 }
