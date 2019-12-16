@@ -1,5 +1,5 @@
 {
-  "full_name": "Job Céspedes",
+  "full_name": "Job Céspedes Ortiz",
   "email": "jobcespedes@gmail.com",
   "role_name": "Super.Role",
   "github_user": "jobcespedes",
@@ -7,6 +7,6 @@
   "short_description": "Description for {{ cookiecutter.role_name }}",
   "year": "2019",
   "version": "0.0.1",
-  "min_ansible_version": "2.5",
+  "min_ansible_version": "2.8",
   "allow_duplicates": "false"
 }
