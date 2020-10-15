@@ -1,7 +1,7 @@
 Role Name: {{cookiecutter.role_name}}
 =========
 
-[![Build Status](https://travis-ci.org/{{cookiecutter.github_user}}/{{cookiecutter.repo_name}}.svg?branch=master)](https://travis-ci.org/{{cookiecutter.github_user}}/{{cookiecutter.repo_name}}) [![Buy me a coffee](https://img.shields.io/badge/$-BuyMeACoffee-blue.svg)](https://www.buymeacoffee.com/jobcespedes)
+[![Build Status](https://travis-ci.com/{{cookiecutter.github_user}}/{{cookiecutter.repo_name}}.svg?branch=master)](https://travis-ci.com/{{cookiecutter.github_user}}/{{cookiecutter.repo_name}}) [![Buy me a coffee](https://img.shields.io/badge/$-BuyMeACoffee-blue.svg)](https://www.buymeacoffee.com/jobcespedes)
 
 {{cookiecutter.short_description}}
 
