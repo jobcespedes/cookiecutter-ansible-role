@@ -6,8 +6,7 @@ services:
 env:
   global:
     - ROLE_NAME: {{cookiecutter.role_name}}
-    - GALAXY_ROLE_NAME: >-
-        {{cookiecutter.github_user + '.' + cookiecutter.role_name}}
+    - GALAXY_ROLE_NAME: {{cookiecutter.github_user}}
   matrix:
     - MOLECULE_DISTRO: centos7
     - MOLECULE_DISTRO: ubuntu1804
